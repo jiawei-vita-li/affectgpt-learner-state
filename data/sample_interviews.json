@@ -1,0 +1,197 @@
+[
+  {
+    "interview_id": "int_onboarding_001",
+    "project_id": "affectinsight_onboarding_research",
+    "title": "New user onboarding usability interview",
+    "participant": {
+      "participant_id": "p_001",
+      "segment": "new_user",
+      "role": "product_manager",
+      "experience_level": "intermediate",
+      "metadata": {
+        "industry": "SaaS",
+        "company_size": "100-500",
+        "region": "US"
+      }
+    },
+    "session": {
+      "date": "2026-05-25",
+      "duration_minutes": 38,
+      "interview_type": "moderated usability test",
+      "consent_status": "sample_mock_data",
+      "recording_available": false,
+      "transcript_available": true
+    },
+    "research_goals": [
+      "Understand where new users lose confidence during onboarding.",
+      "Identify moments where users need stronger product guidance.",
+      "Extract evidence-backed product opportunities from interview transcripts."
+    ],
+    "transcript_segments": [
+      {
+        "segment_id": "seg_001",
+        "timestamp_start": "00:01:20",
+        "timestamp_end": "00:02:04",
+        "speaker": "participant",
+        "text": "I understand that this is the setup step, but I'm not sure what will happen after I click continue.",
+        "context": {
+          "task": "complete onboarding setup",
+          "screen": "setup_intro",
+          "prompt": "What are you expecting to happen next?",
+          "product_area": "onboarding"
+        },
+        "cues": {
+          "audio": {"pause_ratio": 0.31, "pitch_delta": 0.42, "speech_rate_wpm": 104},
+          "facial": {"brow_tension": 0.52, "smile_score": 0.12, "eye_contact_score": 0.51},
+          "video": {"gaze_shift_count": 5, "movement_energy": 0.36},
+          "text": {"sentiment": -0.24, "uncertainty_words": 2, "relief_words": 0}
+        }
+      },
+      {
+        "segment_id": "seg_002",
+        "timestamp_start": "00:03:10",
+        "timestamp_end": "00:03:58",
+        "speaker": "participant",
+        "text": "There are too many options on this screen. I feel overwhelmed because I don't know which one matters for my team right now.",
+        "context": {
+          "task": "configure dashboard",
+          "screen": "dashboard_setup",
+          "prompt": "How would you decide what to configure first?",
+          "product_area": "dashboard"
+        },
+        "cues": {
+          "audio": {"pause_ratio": 0.27, "pitch_delta": 0.56, "speech_rate_wpm": 126},
+          "facial": {"brow_tension": 0.78, "smile_score": 0.05, "eye_contact_score": 0.42},
+          "video": {"gaze_shift_count": 9, "movement_energy": 0.62},
+          "text": {"sentiment": -0.52, "uncertainty_words": 2, "relief_words": 0}
+        }
+      },
+      {
+        "segment_id": "seg_003",
+        "timestamp_start": "00:05:04",
+        "timestamp_end": "00:05:49",
+        "speaker": "participant",
+        "text": "The page said setup was complete, but I still felt like I might have missed something.",
+        "context": {
+          "task": "finish setup",
+          "screen": "setup_confirmation",
+          "prompt": "How did you feel after finishing setup?",
+          "product_area": "onboarding"
+        },
+        "cues": {
+          "audio": {"pause_ratio": 0.24, "pitch_delta": 0.38, "speech_rate_wpm": 112},
+          "facial": {"brow_tension": 0.64, "smile_score": 0.18, "eye_contact_score": 0.49},
+          "video": {"gaze_shift_count": 4, "movement_energy": 0.33},
+          "text": {"sentiment": -0.35, "uncertainty_words": 2, "relief_words": 0}
+        }
+      },
+      {
+        "segment_id": "seg_004",
+        "timestamp_start": "00:07:20",
+        "timestamp_end": "00:08:02",
+        "speaker": "participant",
+        "text": "When I saw the checklist, that helped. I felt relieved because I could finally see what was done.",
+        "context": {
+          "task": "review setup checklist",
+          "screen": "completion_checklist",
+          "prompt": "What changed after seeing the checklist?",
+          "product_area": "onboarding"
+        },
+        "cues": {
+          "audio": {"pause_ratio": 0.09, "pitch_delta": 0.18, "speech_rate_wpm": 139},
+          "facial": {"brow_tension": 0.21, "smile_score": 0.71, "eye_contact_score": 0.69},
+          "video": {"gaze_shift_count": 2, "movement_energy": 0.25},
+          "text": {"sentiment": 0.61, "uncertainty_words": 0, "relief_words": 2}
+        }
+      }
+    ]
+  },
+  {
+    "interview_id": "int_collab_002",
+    "project_id": "affectinsight_collaboration_research",
+    "title": "Collaboration workflow research interview",
+    "participant": {
+      "participant_id": "p_002",
+      "segment": "team_admin",
+      "role": "operations lead",
+      "experience_level": "advanced",
+      "metadata": {
+        "industry": "B2B workflow",
+        "company_size": "500-1000",
+        "region": "APAC"
+      }
+    },
+    "session": {
+      "date": "2026-05-25",
+      "duration_minutes": 42,
+      "interview_type": "semi_structured",
+      "consent_status": "sample_mock_data",
+      "recording_available": false,
+      "transcript_available": true
+    },
+    "research_goals": [
+      "Identify why admins hesitate to share generated reports.",
+      "Understand what evidence makes AI summaries trustworthy.",
+      "Find follow-up research questions for collaboration features."
+    ],
+    "transcript_segments": [
+      {
+        "segment_id": "seg_101",
+        "timestamp_start": "00:02:05",
+        "timestamp_end": "00:02:48",
+        "speaker": "participant",
+        "text": "The summary looks useful, but I would hesitate to send it to my team unless I can see where each point came from.",
+        "context": {
+          "task": "review generated report",
+          "screen": "summary_panel",
+          "prompt": "Would you share this report?",
+          "product_area": "collaboration"
+        },
+        "cues": {
+          "audio": {"pause_ratio": 0.22, "pitch_delta": 0.33, "speech_rate_wpm": 118},
+          "facial": {"brow_tension": 0.55, "smile_score": 0.22, "eye_contact_score": 0.58},
+          "video": {"gaze_shift_count": 4, "movement_energy": 0.28},
+          "text": {"sentiment": -0.12, "uncertainty_words": 1, "relief_words": 0}
+        }
+      },
+      {
+        "segment_id": "seg_102",
+        "timestamp_start": "00:04:10",
+        "timestamp_end": "00:04:55",
+        "speaker": "participant",
+        "text": "I get frustrated when AI gives a confident recommendation but doesn't show the evidence. Then I have to rewatch the interview anyway.",
+        "context": {
+          "task": "audit evidence",
+          "screen": "insight_detail",
+          "prompt": "What makes an AI insight trustworthy?",
+          "product_area": "collaboration"
+        },
+        "cues": {
+          "audio": {"pause_ratio": 0.18, "pitch_delta": 0.48, "speech_rate_wpm": 132},
+          "facial": {"brow_tension": 0.73, "smile_score": 0.08, "eye_contact_score": 0.46},
+          "video": {"gaze_shift_count": 6, "movement_energy": 0.45},
+          "text": {"sentiment": -0.66, "uncertainty_words": 0, "relief_words": 0}
+        }
+      },
+      {
+        "segment_id": "seg_103",
+        "timestamp_start": "00:06:12",
+        "timestamp_end": "00:06:51",
+        "speaker": "participant",
+        "text": "If I could click each insight and jump back to the quote, I would feel much more confident using it in a product review.",
+        "context": {
+          "task": "evaluate evidence links",
+          "screen": "evidence_drawer",
+          "prompt": "What would make this easier to use?",
+          "product_area": "collaboration"
+        },
+        "cues": {
+          "audio": {"pause_ratio": 0.11, "pitch_delta": 0.21, "speech_rate_wpm": 141},
+          "facial": {"brow_tension": 0.24, "smile_score": 0.58, "eye_contact_score": 0.72},
+          "video": {"gaze_shift_count": 2, "movement_energy": 0.22},
+          "text": {"sentiment": 0.42, "uncertainty_words": 0, "relief_words": 1}
+        }
+      }
+    ]
+  }
+]
