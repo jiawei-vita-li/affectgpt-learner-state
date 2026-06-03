@@ -1,7 +1,6 @@
 # PRD: AffectGPT — Learner State Feedback
 
-> TL;DR entry. For the full bilingual 17-section PRD see [`PRD_full.md`](PRD_full.md).
-> 简短入口。完整双语 17 章 PRD 见 [`PRD_full.md`](PRD_full.md)。
+> 概要（精简版）。完整双语 17 章 PRD 见 [`PRD_full.md`](PRD_full.md)。
 
 ## One-liner / 一句话
 
@@ -19,7 +18,7 @@ Student grading. Hiring or admissions filtering. Exam scoring. Clinical mental-h
 - 5 open-vocabulary emotion labels mapped to canonical 4-class (DAiSEE-aligned) / 5 开放词汇 → 规范 4 类
 - HuggingFace `trpakov/vit-face-expression` for facial-expression classification / HuggingFace 面部表情分类
 - OpenCV + Haar for low-level visual + face count / OpenCV + Haar
-- Mandatory `safety_note = "this is not a psychological diagnosis"` enforced by tests / `safety_note` 强制由测试钉住
+- Mandatory `safety_note = "this is not a psychological diagnosis"` enforced by tests / `safety_note` 为必填字段，由单元测试强制校验免责文案
 
 ## Phase 2 (designed)
 

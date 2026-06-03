@@ -17,8 +17,8 @@ Online courses measure completion rate but cannot tell *when* a learner gets con
 **AffectGPT Learner State** 接受教学视频 / 摄像头流 / 样例访谈片段，输出**多模态学习者状态时间线**：四个规范标签（`engagement / confusion / frustration / boredom`，底层由 5 标签开放词汇集 `frustrated / confused / hesitant / relieved / overwhelmed` 支撑）+ 证据归因 + 三类下游信号卡（课程设计优化 / 直播教师 dashboard / 自适应触发）。
 **AffectGPT Learner State** ingests instructional video / camera feed / sample interview segments and returns a **multimodal learner-state timeline** with four canonical labels (`engagement / confusion / frustration / boredom`, backed by 5 open-vocab labels), evidence attribution, and three downstream signal cards.
 
-**硬边界**：本产品**不用于**学生打分、招生/招聘筛选、心理诊断或任何高风险个体判断。
-**Hard boundary:** this product is **not for** student grading, hiring/admissions filtering, psychological diagnosis, or any high-stakes individual judgment.
+**使用边界**：本产品**不用于**学生打分、招生/招聘筛选、心理诊断或任何高风险个体判断。
+**Usage boundary:** this product is **not for** student grading, hiring/admissions filtering, psychological diagnosis, or any high-stakes individual judgment.
 
 ---
 
@@ -306,7 +306,7 @@ See `docs/RESPONSIBLE_AI.md`. PRD-level commitments:
 - **未成年人 / Minors**：需要 consent；demo 默认不留存原视频。Consent required; demo does not retain raw video by default.
 - **教师在环 / Teachers in the loop**：信号辅助，不替代教师判断。Signals assist, not replace.
 - **低置信 / Low confidence**：路由人工 review，不走自动学生侧干预。Routes to human review, never auto student-facing intervention.
-- **safety_note 字段 / Safety-note field**：结构化必填；测试断言。Structurally required; test-pinned.
+- **safety_note 字段 / Safety-note field**：结构化必填；测试断言校验。Structurally required; enforced by tests.
 - **文化偏差 / Cultural bias**：面部表情与情感模型带文化偏差 — Phase 2 计划包含偏差感知 review 与显式 caveat 文案。Phase 2 plan includes bias-aware review + explicit caveat.
 
 ---
@@ -359,4 +359,4 @@ See `docs/RESPONSIBLE_AI.md`. PRD-level commitments:
 | Evidence / 证据 | An atom with `source`, `quote`, `cue`, `confidence` linking a signal to a perceptible feature / 把信号链接到可感知特征的 atom |
 | Structured rationale / 结构化 rationale | A 4-field record (`recognition`, `evidence_attribution`, `product_suggestion`, `safety_note`) / 四字段记录 |
 | Signal card / 信号卡 | PM-facing output unit aimed at one of three personas / 面向三类角色之一的输出单元 |
-| Safety note / 安全声明 | Required string disclaiming psychological diagnosis; test-pinned / 必填诊断免责，由测试钉住 |
+| Safety note / 安全声明 | Required disclaimer string; enforced by unit tests / 必填诊断免责文案，由单元测试强制校验 |

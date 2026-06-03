@@ -16,7 +16,7 @@
 | --- | --- |
 | **Algorithm** | 5-label open-vocabulary emotion set · multi-source weighted cue fusion · HuggingFace `trpakov/vit-face-expression` for facial-expression classification (top-3) · OpenCV low-level visual metrics + Haar face count |
 | **Product** | Bilingual Streamlit (ZH/EN) · sample-interview replay + image/video upload · pain points · product opportunities · structured rationale with mandatory `safety_note` · grounding metrics surfaced as a dict |
-| **Engineering** | 5 unittest cases pinning the schema contract, evidence grounding, and safety-note string · dataclass-typed schemas · explicit `source` whitelist per evidence atom |
+| **Engineering** | 5 unittest cases validating the schema contract, evidence grounding, and safety-note string · dataclass-typed schemas · explicit `source` whitelist per evidence atom |
 
 | 层次 | 内容 |
 | --- | --- |
@@ -89,7 +89,7 @@ See [docs/RESPONSIBLE_AI.md](docs/RESPONSIBLE_AI.md). Key commitments:
 
 - **Not for** punitive analytics, grading, hiring, exam scoring, or clinical diagnosis.  
   **不用于**惩罚性分析、学业打分、招聘筛选、考试评分或临床诊断。
-- **Mandatory `safety_note`** — `StructuredRationale.safety_note` is a required field; a unit test pins the disclaimer string.  
+- **Mandatory `safety_note`** — `StructuredRationale.safety_note` is a required field; a unit test enforces the disclaimer string.  
   **安全说明必填** — `safety_note` 为必填字段，单元测试锁定免责文案。
 - **Low-confidence routes to human review**, never auto-notifies the student or teacher.  
   **低置信结果走人工复核**，不自动向学生或教师推送通知。

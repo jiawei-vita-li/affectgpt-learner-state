@@ -25,8 +25,8 @@
 - 低层视觉指标 + Haar 脸数（OpenCV），无脸图像也能产出 cue。
 - Low-level visual metrics + Haar face count (OpenCV) so faceless images still produce cues.
 
-- **强制 `safety_note` 字段** + 测试钉住 "not a psychological diagnosis" 文案。
-- A **mandatory `safety_note` field** with a test pinning the "not a psychological diagnosis" string.
+- **强制 `safety_note` 字段**，单元测试校验免责文案（含「这不是心理诊断」）。
+- A **mandatory `safety_note` field** with a unit test enforcing the "not a psychological diagnosis" string.
 
 - 5 条 unittest 全部断言通过。
 - 5 unittest cases, all green.
@@ -130,7 +130,7 @@ Phase 1 implementation of 5-label open-vocab scoring:
 - 加权融合 → 单标签 + `intensity ∈ [0,1]` + `confidence ∈ [0,1]`。Weighted fusion → single label + bounded scalars.
 - 标签 → valence 映射：`relieved` = positive；其余 = negative；不平衡仅作正/负。Label → valence mapping.
 
-测试 `test_open_vocabulary_emotion_timeline` 钉住：任一访谈都覆盖至少 2 个 distinct label，且每信号 evidence ≠ 空。
+测试 `test_open_vocabulary_emotion_timeline` 校验：每条访谈至少覆盖 2 种不同情绪标签，且每个信号都附带非空证据。
 Test `test_open_vocabulary_emotion_timeline` pins: any interview covers ≥ 2 distinct labels and no signal has empty evidence.
 
 ### 3.4 `core/insight_generator.py`
@@ -144,7 +144,7 @@ Constructs an `InsightReport` from `EmotionSignal`s:
 - **跟进问题 / Follow-up questions**：基于 unresolved cue 模板生成。Generated from unresolved-cue templates.
 - **指标 dict / Metrics dict**：暴露 `signal_count`、`negative_valence_ratio`、`grounded_pain_points`、`total_pain_points`、`evidence_coverage`、`opportunity_count`、`safety_note_present`。Seven keys exposed.
 
-测试钉住：metrics dict 必含 7 字段；`evidence_coverage ∈ [0,1]`；至少 1 个 `safety_note_present == True`。
+单元测试校验：metrics 字典须包含 7 个字段；`evidence_coverage` 取值在 [0,1]；至少一项 `safety_note_present == True`。
 Tests pin: metrics dict contains the 7 keys; `evidence_coverage ∈ [0,1]`; `safety_note_present` is True for at least one rationale.
 
 ### 3.5 `core/media_analyzer.py`
