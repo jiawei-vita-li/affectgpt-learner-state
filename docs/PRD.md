@@ -1,6 +1,6 @@
 # PRD: AffectGPT — Learner State Feedback
 
-> 概要（精简版）。完整双语 17 章 PRD 见 [`PRD_full.md`](PRD_full.md)。
+> 概要（精简版）。完整双语17章PRD见 [`PRD_full.md`](PRD_full.md)。
 
 ## One-liner / 一句话
 
@@ -10,13 +10,13 @@ Instructional video → learner-state timeline → multimodal evidence → three
 ## Not in scope / 明确非目标
 
 Student grading. Hiring or admissions filtering. Exam scoring. Clinical mental-health diagnosis. Generic UX research pain-point mining.
-学生打分、招聘/招生筛选、考试评分、临床心理诊断、通用 UX 研究痛点挖掘。
+学生打分、招聘/招生筛选、考试评分、临床心理诊断、通用UX研究痛点挖掘。
 
 ## MVP (this repo) / MVP（本仓库）
 
 - Streamlit: sample-interview replay + image / video upload / 样例回放 + 图片视频上传
-- 5 open-vocabulary emotion labels mapped to canonical 4-class (DAiSEE-aligned) / 5 开放词汇 → 规范 4 类
-- HuggingFace `trpakov/vit-face-expression` for facial-expression classification / HuggingFace 面部表情分类
+- 5 open-vocabulary emotion labels mapped to canonical 4-class (DAiSEE-aligned) / 5开放词汇 → 规范4类
+- HuggingFace `trpakov/vit-face-expression` for facial-expression classification / HuggingFace面部表情分类
 - OpenCV + Haar for low-level visual + face count / OpenCV + Haar
 - Mandatory `safety_note = "this is not a psychological diagnosis"` enforced by tests / `safety_note` 为必填字段，由单元测试强制校验免责文案
 
